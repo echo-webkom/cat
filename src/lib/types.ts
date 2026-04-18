@@ -55,6 +55,7 @@ export interface User {
   name: string;
   email: string;
   alternativeEmail: string | null;
+  hasImage: boolean;
   degree: {
     id: string;
     name: string;

@@ -4,6 +4,7 @@
 	import type { User } from '$lib/types';
 	import { getAvatarColor, getInitials } from '$lib/utils.js';
     import { enhance } from '$app/forms';
+    import { createProfilePictureUrl } from '$lib/uno';
 
 	const feeds = [
 		{ href: '/cat-food', label: 'Cat Food' },
@@ -57,11 +58,15 @@
 				<button
 					type="button"
 					class="flex h-8 w-8 items-center justify-center text-xs font-bold text-white transition-opacity hover:opacity-80"
-					style="background-color: {getAvatarColor(user.current.name)}"
+					style="background-color: {user.current.hasImage ? 'transparent' : getAvatarColor(user.current.name)}"
 					onclick={() => (menuOpen = !menuOpen)}
 					aria-label="User menu"
 				>
-					{getInitials(user.current.name)}
+					{#if user.current.hasImage}
+						<img src={createProfilePictureUrl(user.current.id)} alt="User avatar" class="h-full w-full rounded-full object-cover" />
+					{:else}
+						{getInitials(user.current.name)}
+					{/if}
 				</button>
 
 				{#if menuOpen}
