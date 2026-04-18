@@ -20,7 +20,7 @@
 	<title>Mouse Clicks — Cat</title>
 </svelte:head>
 
-<div class="mx-auto max-w-2xl px-4 sm:px-6">
+<div class="mx-auto max-w-3xl px-4 sm:px-6">
 	<FeedHeader title="Mouse Clicks" subtitle="Links worth sharing — articles, tools, tutorials, and more" bind:searchQuery />
 
 	{#if filteredPosts().length === 0}

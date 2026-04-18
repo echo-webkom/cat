@@ -2,35 +2,46 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+@layer theme {
+	:root {
+		--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+		--font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+	}
+}
+
 @layer base {
 	html {
 		scroll-behavior: smooth;
 	}
 
 	body {
-		background-color: #09090b;
-		color: #fafafa;
+		background-color: #0a0a0a;
+		color: #e8e8e8;
+		font-family: var(--font-mono);
 		min-height: 100vh;
 		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
+	}
+
+	::selection {
+		background: #00ff8830;
+		color: #00ff88;
 	}
 
 	::-webkit-scrollbar {
-		width: 6px;
-		height: 6px;
+		width: 4px;
+		height: 4px;
 	}
 
 	::-webkit-scrollbar-track {
-		background: #18181b;
+		background: #0a0a0a;
 	}
 
 	::-webkit-scrollbar-thumb {
-		background: #3f3f46;
-		border-radius: 9999px;
+		background: #2a2a2a;
 	}
 
 	::-webkit-scrollbar-thumb:hover {
-		background: #52525b;
+		background: #3a3a3a;
 	}
 }
 

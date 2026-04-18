@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="flex shrink-0 items-center justify-center rounded-full font-semibold text-white {sizeClasses[size]}"
+	class="flex shrink-0 items-center justify-center font-bold text-white {sizeClasses[size]}"
 	style="background-color: {getAvatarColor(name)}"
 	title={name}
 >

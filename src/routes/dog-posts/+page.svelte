@@ -20,7 +20,7 @@
 	<title>Dog Posts — Cat</title>
 </svelte:head>
 
-<div class="mx-auto max-w-2xl px-4 sm:px-6">
+<div class="mx-auto max-w-3xl px-4 sm:px-6">
 	<FeedHeader title="Dog Posts" subtitle="Official announcements and important notices" bind:searchQuery />
 
 	{#if filteredPosts().length === 0}

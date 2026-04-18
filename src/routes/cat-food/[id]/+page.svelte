@@ -19,13 +19,10 @@
 		href="/cat-food"
 		class="mb-6 inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white"
 	>
-		<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-			<path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-		</svg>
-		Cat Food
+		← cat-food
 	</a>
 
-	<div class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+	<div class="overflow-hidden border border-zinc-800 bg-zinc-900">
 		<img
 			src={post.headerImage}
 			alt={post.title}
@@ -33,31 +30,29 @@
 		/>
 
 		<div class="p-6 sm:p-8">
-			<div class="mb-2 text-sm text-zinc-400">{formatFullDate(post.timestamp)}</div>
+			<div class="mb-2 text-xs text-zinc-400">// {formatFullDate(post.timestamp)}</div>
 
 			<h1 class="mb-3 text-2xl font-bold text-white sm:text-3xl">{post.title}</h1>
-			<p class="mb-6 text-base text-zinc-300 italic">{post.tagline}</p>
+			<p class="mb-6 font-sans text-base text-zinc-400 italic">{post.tagline}</p>
 
 			<div class="mb-8 flex items-center justify-between border-b border-zinc-800 pb-6">
 				<div class="flex items-center gap-3">
 					<Avatar name={post.author.name} size="md" />
 					<div>
-						<p class="text-sm font-medium text-zinc-200">{post.author.name}</p>
+						<p class="text-sm font-semibold text-zinc-200">{post.author.name}</p>
 						<p class="text-xs text-zinc-400 capitalize">{post.author.role}</p>
 					</div>
 				</div>
-				<LikeButton postId={post.id} initialLikes={post.likes} />
+				<LikeButton postId={post.id} initialLikes={post.likes} size="lg" />
 			</div>
 
 			<div>
 				{#each post.body.split('\n\n') as paragraph}
-					<p class="mb-4 leading-relaxed text-zinc-200">{paragraph}</p>
+					<p class="mb-4 font-sans leading-relaxed text-zinc-200">{paragraph}</p>
 				{/each}
 			</div>
 		</div>
 	</div>
 
-	<div class="px-0 sm:px-2">
-		<CommentSection postId={post.id} postType="cat-food" initialComments={comments} />
-	</div>
+	<CommentSection postId={post.id} postType="cat-food" initialComments={comments} />
 </div>

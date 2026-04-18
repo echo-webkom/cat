@@ -20,7 +20,7 @@
 	<title>Cat Food — Cat</title>
 </svelte:head>
 
-<div class="mx-auto max-w-2xl px-4 sm:px-6">
+<div class="mx-auto max-w-3xl px-4 sm:px-6">
 	<FeedHeader title="Cat Food" subtitle="Fresh posts from the community" bind:searchQuery />
 
 	{#if filteredPosts().length === 0}

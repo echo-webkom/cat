@@ -17,42 +17,39 @@
 		href="/dog-posts"
 		class="mb-6 inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white"
 	>
-		<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-			<path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-		</svg>
-		Dog Posts
+		← dog-posts
 	</a>
 
-	<div class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+	<div class="border border-zinc-800 bg-zinc-900">
 		<div class="p-6 sm:p-8">
 			{#if post.tags.includes('important')}
-				<div class="mb-4 flex items-center gap-1.5 self-start rounded-full bg-red-500/15 px-3 py-1.5 text-sm font-semibold text-red-400 w-fit">
+				<div class="mb-4 flex items-center gap-1.5 self-start border border-red-500/30 bg-red-500/10 px-3 py-1.5 text-sm font-semibold text-red-400 w-fit">
 					<svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
 						<path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
 					</svg>
-					Important
+					[!] important
 				</div>
 			{/if}
 
-			<div class="mb-2 text-sm text-zinc-400">{formatFullDate(post.timestamp)}</div>
+			<div class="mb-2 text-xs text-zinc-400">// {formatFullDate(post.timestamp)}</div>
 
 			<h1 class="mb-3 text-2xl font-bold text-white sm:text-3xl">{post.title}</h1>
-			<p class="mb-6 text-base text-zinc-300 italic">{post.tagline}</p>
+			<p class="mb-6 font-sans text-base text-zinc-400 italic">{post.tagline}</p>
 
 			<div class="mb-8 flex items-center justify-between border-b border-zinc-800 pb-6">
 				<div class="flex items-center gap-3">
 					<Avatar name={post.author.name} size="md" />
 					<div>
-						<p class="text-sm font-medium text-zinc-200">{post.author.name}</p>
+						<p class="text-sm font-semibold text-zinc-200">{post.author.name}</p>
 						<p class="text-xs text-zinc-400 capitalize">{post.author.role}</p>
 					</div>
 				</div>
-				<LikeButton postId={post.id} initialLikes={post.likes} />
+				<LikeButton postId={post.id} initialLikes={post.likes} size="lg" />
 			</div>
 
 			<div>
 				{#each post.body.split('\n\n') as paragraph}
-					<p class="mb-4 leading-relaxed text-zinc-200">{paragraph}</p>
+					<p class="mb-4 font-sans leading-relaxed text-zinc-200">{paragraph}</p>
 				{/each}
 			</div>
 		</div>

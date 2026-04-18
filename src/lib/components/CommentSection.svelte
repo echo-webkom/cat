@@ -37,53 +37,54 @@
 </script>
 
 <section class="mt-10 border-t border-zinc-800 pt-8">
-	<h2 class="mb-6 text-base font-semibold text-white">
-		Comments
-		<span class="ml-2 rounded-full bg-zinc-800 px-2 py-0.5 text-xs font-normal text-zinc-400">
-			{allComments.length}
-		</span>
+	<h2 class="mb-6 text-base font-bold text-white">
+		<span class="text-zinc-600 select-none mr-1">#</span>comments
+		<span class="ml-2 text-sm font-normal text-zinc-600">({allComments.length})</span>
 	</h2>
 
 	<div class="mb-8 flex flex-col gap-4">
 		{#each allComments as comment (comment.id)}
 			<div class="flex gap-3">
 				<Avatar name={comment.author.name} size="sm" />
-				<div class="flex-1 rounded-xl bg-zinc-900 p-4">
+				<div class="flex-1 border border-zinc-800 bg-zinc-900 p-4">
 					<div class="mb-2 flex items-center gap-2">
-						<span class="text-sm font-medium text-zinc-100">{comment.author.name}</span>
+						<span class="text-sm font-semibold text-zinc-100">{comment.author.name}</span>
+						<span class="text-zinc-700">//</span>
 						<span class="text-xs text-zinc-400">{formatRelativeTime(comment.timestamp)}</span>
 					</div>
-					<p class="text-sm leading-relaxed text-zinc-300">{comment.body}</p>
+					<p class="font-sans text-sm leading-relaxed text-zinc-300">{comment.body}</p>
 				</div>
 			</div>
 		{:else}
-			<p class="text-sm text-zinc-400">No comments yet. Be the first!</p>
+			<p class="text-sm text-zinc-600">// no comments yet</p>
 		{/each}
 	</div>
 
-	<form onsubmit={submit} class="flex flex-col gap-4">
-		<h3 class="text-sm font-semibold text-zinc-200">Add a comment</h3>
+	<form onsubmit={submit} class="flex flex-col gap-3">
+		<p class="text-sm font-bold text-zinc-400">
+			<span class="text-zinc-600 select-none mr-1">#</span>add comment
+		</p>
 		<input
 			type="text"
-			placeholder="Your name"
+			placeholder="your name"
 			bind:value={authorName}
 			required
-			class="rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-2.5 text-sm text-zinc-100 placeholder-zinc-600 outline-none transition-colors focus:border-violet-500/60 focus:ring-1 focus:ring-violet-500/20"
+			class="border border-zinc-800 bg-zinc-900 px-4 py-2.5 text-sm text-zinc-100 placeholder-zinc-600 outline-none transition-colors focus:border-[#00ff88]/40"
 		/>
 		<textarea
-			placeholder="Write a comment..."
+			placeholder="write a comment..."
 			bind:value={body}
 			required
 			rows="4"
-			class="resize-none rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-2.5 text-sm text-zinc-100 placeholder-zinc-600 outline-none transition-colors focus:border-violet-500/60 focus:ring-1 focus:ring-violet-500/20"
+			class="resize-none border border-zinc-800 bg-zinc-900 px-4 py-2.5 text-sm text-zinc-100 placeholder-zinc-600 outline-none transition-colors focus:border-[#00ff88]/40"
 		></textarea>
 		<div class="flex justify-end">
 			<button
 				type="submit"
 				disabled={submitting || !authorName.trim() || !body.trim()}
-				class="rounded-lg bg-violet-600 px-5 py-2 text-sm font-semibold text-white transition-opacity hover:bg-violet-500 disabled:opacity-40"
+				class="border border-zinc-700 px-5 py-2 text-sm text-zinc-300 transition-colors hover:border-[#00ff88]/50 hover:text-[#00ff88] disabled:opacity-30 disabled:cursor-not-allowed"
 			>
-				Post comment
+				[ post comment ]
 			</button>
 		</div>
 	</form>
