@@ -1,0 +1,122 @@
+[
+  {
+    "id": "cmt-1",
+    "postId": "cf-1",
+    "postType": "cat-food",
+    "author": { "id": "u-5", "name": "Jonas Eriksen", "role": "student" },
+    "body": "The hand-drawing tip is underrated. I did the same thing for B-trees and it clicked way faster than any video explanation.",
+    "timestamp": "2026-04-15T11:15:00Z"
+  },
+  {
+    "id": "cmt-2",
+    "postId": "cf-1",
+    "postType": "cat-food",
+    "author": { "id": "u-7", "name": "Tobias Haugen", "role": "student" },
+    "body": "Wish I'd read this before my exam last semester. Failed it and had to resit, mostly because I was memorizing instead of understanding. Resit went much better.",
+    "timestamp": "2026-04-15T12:40:00Z"
+  },
+  {
+    "id": "cmt-3",
+    "postId": "cf-1",
+    "postType": "cat-food",
+    "author": { "id": "u-2", "name": "Ingrid Holm", "role": "student" },
+    "body": "The sleep thing is real. I tracked my exam scores vs sleep the night before and the correlation was uncomfortable to look at.",
+    "timestamp": "2026-04-15T14:20:00Z"
+  },
+  {
+    "id": "cmt-4",
+    "postId": "cf-2",
+    "postType": "cat-food",
+    "author": { "id": "u-6", "name": "Mia Andersen", "role": "student" },
+    "body": "Which ThinkCentre model? I've been eyeing the M710q but the M920q might be worth the extra cost for the newer chipset.",
+    "timestamp": "2026-04-12T15:30:00Z"
+  },
+  {
+    "id": "cmt-5",
+    "postId": "cf-2",
+    "postType": "cat-food",
+    "author": { "id": "u-5", "name": "Jonas Eriksen", "role": "student" },
+    "body": "The M920q is a great pick. I got one last year for 1200 and it's been running non-stop. The NVMe slot is a huge upgrade over the M710q's SATA-only setup.",
+    "timestamp": "2026-04-12T16:00:00Z"
+  },
+  {
+    "id": "cmt-6",
+    "postId": "cf-4",
+    "postType": "cat-food",
+    "author": { "id": "u-7", "name": "Tobias Haugen", "role": "student" },
+    "body": "The Q&A tool is genuinely something that would improve lectures. Have you considered making it public or open-sourcing it?",
+    "timestamp": "2026-04-04T09:00:00Z"
+  },
+  {
+    "id": "cmt-7",
+    "postId": "cf-4",
+    "postType": "cat-food",
+    "author": { "id": "u-1", "name": "Magnus Lie", "role": "student" },
+    "body": "Was at the hackathon. The navigation app demo was impressive — worked on the floor plans in real time. Deserved first place.",
+    "timestamp": "2026-04-04T10:30:00Z"
+  },
+  {
+    "id": "cmt-8",
+    "postId": "cf-5",
+    "postType": "cat-food",
+    "author": { "id": "u-2", "name": "Ingrid Holm", "role": "student" },
+    "body": "The kickstart.nvim recommendation is solid. I made the mistake of starting from scratch and spent a week fighting Lua config instead of learning the editor.",
+    "timestamp": "2026-03-28T12:00:00Z"
+  },
+  {
+    "id": "cmt-9",
+    "postId": "cf-5",
+    "postType": "cat-food",
+    "author": { "id": "u-6", "name": "Mia Andersen", "role": "student" },
+    "body": "Still not convinced it's worth the initial cost in productivity. What's your current plugin count? I feel like most setups end up as VS Code with more typing.",
+    "timestamp": "2026-03-29T08:15:00Z"
+  },
+  {
+    "id": "cmt-10",
+    "postId": "cf-8",
+    "postType": "cat-food",
+    "author": { "id": "u-5", "name": "Jonas Eriksen", "role": "student" },
+    "body": "The 'using it as a tutor' framing is exactly right. I spent months using it to write code I should be writing myself, and my actual skills were going backwards.",
+    "timestamp": "2026-03-10T09:30:00Z"
+  },
+  {
+    "id": "cmt-11",
+    "postId": "cf-8",
+    "postType": "cat-food",
+    "author": { "id": "u-7", "name": "Tobias Haugen", "role": "student" },
+    "body": "Curious which model you find most useful for explaining concepts — I've been bouncing between a few and the quality varies a lot by subject.",
+    "timestamp": "2026-03-10T11:00:00Z"
+  },
+  {
+    "id": "cmt-12",
+    "postId": "mc-1",
+    "postType": "mouse-clicks",
+    "author": { "id": "u-1", "name": "Magnus Lie", "role": "student" },
+    "body": "Been using this for years. The heap sort visualization finally made the heapify step make sense to me after many failed attempts with textbooks.",
+    "timestamp": "2026-04-17T13:00:00Z"
+  },
+  {
+    "id": "cmt-13",
+    "postId": "mc-2",
+    "postType": "mouse-clicks",
+    "author": { "id": "u-7", "name": "Tobias Haugen", "role": "student" },
+    "body": "The shell tools lecture alone is worth it. I was writing terrible bash scripts for two years before watching that and realized I was doing everything wrong.",
+    "timestamp": "2026-04-14T10:00:00Z"
+  },
+  {
+    "id": "cmt-14",
+    "postId": "mc-2",
+    "postType": "mouse-clicks",
+    "author": { "id": "u-1", "name": "Magnus Lie", "role": "student" },
+    "body": "Recommended this to my entire study group. The metaprogramming and security lectures are particularly good — things I had no idea I was missing.",
+    "timestamp": "2026-04-14T11:30:00Z"
+  },
+  {
+    "id": "cmt-15",
+    "postId": "mc-4",
+    "postType": "mouse-clicks",
+    "author": { "id": "u-2", "name": "Ingrid Holm", "role": "student" },
+    "body": "CodeCrafters is excellent in general. Also did the 'Build Your Own Git' course and understood Git internals better after that than after two years of using it.",
+    "timestamp": "2026-04-08T15:00:00Z"
+  }
+]

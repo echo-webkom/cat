@@ -1,0 +1,90 @@
+[
+  {
+    "id": "cf-1",
+    "title": "How I survived my first algorithms exam",
+    "tagline": "Tips from someone who nearly didn't make it",
+    "body": "I'll be honest with you — I nearly failed. Three weeks before the exam, I still couldn't explain amortized complexity without my notes. Here's what eventually clicked.\n\nI stopped trying to memorize algorithms and started drawing them by hand. Tracing through a red-black tree rotation with a pen felt slower, but it actually lodged the logic in my brain. Combined with solving past exam problems repeatedly, the patterns became obvious — professors recycle more than they let on.\n\nOne last thing: sleep the night before. I know everyone says it, but I was the 2 AM all-nighter type until I wasn't. The exam I slept properly before was the one I did best on. Trust the process and trust yourself.",
+    "headerImage": "https://picsum.photos/seed/algorithms-study/1200/500",
+    "tags": ["study", "algorithms", "tips", "exams"],
+    "likes": 47,
+    "timestamp": "2026-04-15T10:30:00Z",
+    "author": { "id": "u-1", "name": "Magnus Lie", "role": "student" }
+  },
+  {
+    "id": "cf-2",
+    "title": "My homelab setup for under 5000 NOK",
+    "tagline": "You don't need to break the bank to run your own servers",
+    "body": "After months of research and a lot of regret about unnecessary purchases, I finally have a setup I'm genuinely happy with. The core: a used Lenovo ThinkCentre M920q for 1500 NOK on Finn, a 32GB RAM upgrade, and a 1TB NVMe SSD.\n\nI'm running Proxmox as the hypervisor with separate VMs for Pi-hole, Nextcloud, a Minecraft server for friends, and a bunch of random Docker experiments. The whole thing draws about 35W at idle — surprisingly frugal.\n\nBiggest lesson: start smaller than you think you need. I bought a full rack first and then realized a single mini-PC was all I actually needed. The rack is now a very expensive clothes hanger.",
+    "headerImage": "https://picsum.photos/seed/homelab-server/1200/500",
+    "tags": ["homelab", "servers", "linux", "hardware"],
+    "likes": 61,
+    "timestamp": "2026-04-12T14:20:00Z",
+    "author": { "id": "u-5", "name": "Jonas Eriksen", "role": "student" }
+  },
+  {
+    "id": "cf-3",
+    "title": "Free resources for learning Rust in 2026",
+    "tagline": "The best free materials after working through most of them",
+    "body": "Rust has a steep learning curve, but the community has produced some genuinely excellent free materials. After working through most of them, here are my honest recommendations.\n\nStart with 'The Book' at doc.rust-lang.org/book. It's free, comprehensive, and better written than most paid resources. Then move to Rustlings — small interactive exercises that reinforce the concepts without being overwhelming. After that, try 'Rust by Example' for seeing patterns applied in context.\n\nOnce you're comfortable with the basics, Comprehensive Rust by Google is fantastic for going deeper. Jon Gjengset's YouTube channel is advanced but essential if you want to understand what the borrow checker is actually doing under the hood. His 'Crust of Rust' series is where I finally got it.",
+    "headerImage": "https://picsum.photos/seed/rust-programming/1200/500",
+    "tags": ["rust", "programming", "resources", "learning"],
+    "likes": 89,
+    "timestamp": "2026-04-08T09:15:00Z",
+    "author": { "id": "u-6", "name": "Mia Andersen", "role": "student" }
+  },
+  {
+    "id": "cf-4",
+    "title": "Spring Hackathon 2026 Recap",
+    "tagline": "48 hours, 6 teams, more Red Bull than should be legal",
+    "body": "Forty-eight hours, six teams, and more energy drinks than anyone should consume in a weekend. The Spring Hackathon this year was genuinely one of the best experiences of my studies so far.\n\nOur team built a real-time lecture Q&A tool — students submit questions anonymously, others upvote, and the lecturer sees a live-ranked list. We used SvelteKit on the frontend and a WebSocket server cobbled together with Bun. It actually worked during the demo, which felt like a minor miracle at 4 AM.\n\nThe winning team built an accessible campus navigation app using the university's open floor plan data. Genuinely impressive scope for 48 hours. The runner-up built a timetable optimizer with a surprisingly good local search algorithm. Both deserved their placements. Same time next year?",
+    "headerImage": "https://picsum.photos/seed/hackathon-coding/1200/500",
+    "tags": ["hackathon", "events", "community", "projects"],
+    "likes": 103,
+    "timestamp": "2026-04-03T18:45:00Z",
+    "author": { "id": "u-2", "name": "Ingrid Holm", "role": "student" }
+  },
+  {
+    "id": "cf-5",
+    "title": "Why I switched from VS Code to Neovim",
+    "tagline": "It took 3 months to stop crying about it — worth it",
+    "body": "I'll be upfront: the first two weeks were painful. My productivity dropped by maybe 50% while I was learning the motions. My colleagues thought I'd lost my mind. But four months in, I'm not going back.\n\nThe actual reason I switched wasn't vim motions — it was control. I wanted to understand every single thing happening in my editor. With VS Code, things just happen and you're not entirely sure why. With Neovim and a Lua config, you know exactly what's running and why.\n\nIf you're considering the switch: start with kickstart.nvim, resist the urge to add every plugin you see on YouTube, and properly learn the motions with vimtutor before anything else. The time investment is real, but so is the payoff. Your hands will thank you eventually.",
+    "headerImage": "https://picsum.photos/seed/neovim-terminal/1200/500",
+    "tags": ["tools", "vim", "neovim", "productivity"],
+    "likes": 74,
+    "timestamp": "2026-03-28T11:00:00Z",
+    "author": { "id": "u-7", "name": "Tobias Haugen", "role": "student" }
+  },
+  {
+    "id": "cf-6",
+    "title": "Best spots to code near campus",
+    "tagline": "For when the library is full and you need decent WiFi",
+    "body": "The library is fine, but sometimes you need a change of scenery that isn't a lecture hall. After a semester of working in rotation, here are my top spots.\n\nKafé Celsius on Storgata has reliable WiFi, plenty of power outlets, and they won't passive-aggressively glare at you after an hour. The ambient noise is at a perfect focus-friendly level. An Americano is 42 NOK, which is reasonable for Oslo.\n\nFor free options: the university's 24/7 study hall in the main building (swipe access with student card) is seriously underused after 8 PM. Quiet, good lighting, you can eat at your desk, and it's never crowded when everyone else has gone home. Genuinely my favorite spot for late-night sessions.",
+    "headerImage": "https://picsum.photos/seed/cafe-laptop/1200/500",
+    "tags": ["life", "study-spots", "campus", "tips"],
+    "likes": 38,
+    "timestamp": "2026-03-22T16:30:00Z",
+    "author": { "id": "u-1", "name": "Magnus Lie", "role": "student" }
+  },
+  {
+    "id": "cf-7",
+    "title": "Lessons from my first open source contribution",
+    "tagline": "It wasn't nearly as scary as I'd convinced myself",
+    "body": "I spent three months convincing myself I wasn't good enough to contribute to open source. Then I found a typo in a README, fixed it in 20 minutes, and got it merged. That was the start.\n\nMy first real contribution was adding a missing edge case to a date-parsing library in Rust. The review process was more intimidating than I expected — a maintainer I respected was commenting on my code — but he was genuinely helpful. Explained the conventions, suggested a cleaner approach, merged it after one round of changes.\n\nThe lesson: good projects want contributors. Find something you actually use, read the CONTRIBUTING.md, and start with something small — a bug, a doc fix, a missing test case. The community is usually much friendlier than you expect, and the first merge feels disproportionately satisfying.",
+    "headerImage": "https://picsum.photos/seed/github-open-source/1200/500",
+    "tags": ["open-source", "career", "github", "programming"],
+    "likes": 56,
+    "timestamp": "2026-03-15T13:45:00Z",
+    "author": { "id": "u-6", "name": "Mia Andersen", "role": "student" }
+  },
+  {
+    "id": "cf-8",
+    "title": "AI tools in my study workflow — honest review",
+    "tagline": "After a year of use, here's what actually helps vs. hype",
+    "body": "I've been using AI tools seriously for about a year now and I have complicated feelings. Here's my genuinely honest take after using them daily.\n\nActually useful: explaining concepts I'm confused about (faster than office hours, more patient than a textbook), debugging in rubber-duck mode, generating practice problems when I've run out of past exams. Both Claude and ChatGPT are solid for these.\n\nNot useful, and actively harmful: generating code for assignments (you learn nothing and the code is often subtly wrong in hard-to-spot ways), having it outline your essays or structure your thinking (you need the struggle). The key insight is using AI to amplify understanding rather than replace the work. When I stopped using it as a shortcut and started using it as a tutor who never gets tired of my questions, my understanding actually improved.",
+    "headerImage": "https://picsum.photos/seed/ai-technology/1200/500",
+    "tags": ["ai", "study", "productivity", "tools"],
+    "likes": 92,
+    "timestamp": "2026-03-10T08:00:00Z",
+    "author": { "id": "u-2", "name": "Ingrid Holm", "role": "student" }
+  }
+]

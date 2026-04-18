@@ -1,0 +1,57 @@
+[
+  {
+    "id": "dp-1",
+    "title": "Spring Semester Exam Schedule Published",
+    "tagline": "Full schedule with room assignments now live on StudentWeb",
+    "body": "The complete exam schedule for Spring Semester 2026 has been published on StudentWeb. All written exams are listed with room assignments, start times, and allowed materials.\n\nOne change from the preliminary schedule: INF-2200 Computer Architecture has moved from May 14th to May 19th due to a room conflict. All other exams remain as previously announced. Please check StudentWeb for the updated information rather than relying on the preliminary PDF.\n\nIf you have accommodation needs or exam scheduling conflicts, the deadline to contact the exam office is April 25th. Request forms are available on the student portal under 'Academic Services'. Applications submitted after the deadline cannot be guaranteed consideration.",
+    "headerImage": "https://picsum.photos/seed/exam-schedule/1200/500",
+    "tags": ["announcement", "exams", "academic", "important"],
+    "likes": 34,
+    "timestamp": "2026-04-16T09:00:00Z",
+    "author": { "id": "u-3", "name": "Erik Larsen", "role": "admin" }
+  },
+  {
+    "id": "dp-2",
+    "title": "Network Maintenance: Saturday Night",
+    "tagline": "Campus network down 22:00–06:00 Saturday to Sunday",
+    "body": "Campus network infrastructure maintenance is scheduled for Saturday April 19th from 22:00 to Sunday April 20th at 06:00. This is a required upgrade to core switching infrastructure and cannot be postponed.\n\nDuring this window: eduroam WiFi and wired ethernet in all university buildings will be unavailable. VPN access will also be down. The main university website and StudentWeb will remain accessible from off-campus connections through a backup provider.\n\nPlan accordingly if you intended to work remotely or in university labs during those hours. The IT helpdesk will not be staffed during the maintenance window, but emergency contact information is available on the IT department website.",
+    "headerImage": "https://picsum.photos/seed/network-maintenance/1200/500",
+    "tags": ["maintenance", "it", "network", "notice"],
+    "likes": 12,
+    "timestamp": "2026-04-14T15:00:00Z",
+    "author": { "id": "u-4", "name": "Sofie Berg", "role": "moderator" }
+  },
+  {
+    "id": "dp-3",
+    "title": "Study Hall Extended Hours: Exam Period",
+    "tagline": "24/7 access through June 10th — starts May 1st",
+    "body": "Starting May 1st, the main study hall will be open 24 hours a day, 7 days a week, through the end of the exam period on June 10th. Entry requires a valid student card at all times.\n\nAdditional group study rooms will be available without advance booking during this period. Rooms are first-come, first-served with a maximum occupancy of 6 students. Regular online booking resumes after June 10th.\n\nThe campus café inside the study hall will have extended hours: 07:00–22:00 on weekdays and 09:00–20:00 on weekends. Security staff will be present overnight. Please bring your student card — access will be strictly enforced.",
+    "headerImage": "https://picsum.photos/seed/study-hall-library/1200/500",
+    "tags": ["announcement", "exams", "study-hall", "hours"],
+    "likes": 67,
+    "timestamp": "2026-04-10T11:00:00Z",
+    "author": { "id": "u-3", "name": "Erik Larsen", "role": "admin" }
+  },
+  {
+    "id": "dp-4",
+    "title": "Volunteer Call: Summer Orientation 2026",
+    "tagline": "Help welcome the incoming class — applications open now",
+    "body": "We're looking for student volunteers to help with the incoming class orientation in August 2026. This is a great opportunity to meet new students, build practical experience for your CV, and give back to the community that welcomed you.\n\nVolunteers typically commit to 3–5 days of the orientation week (August 17–21) plus one preparation meeting in late July. You'll be assigned a group of incoming students and guide them through registration, campus tours, social events, and general navigation of university life.\n\nInterested? Fill out the application form on the student union website before May 10th. We'll be in touch with more details and scheduling before the summer break. Questions can be directed to the student union office or posted here.",
+    "headerImage": "https://picsum.photos/seed/orientation-campus/1200/500",
+    "tags": ["volunteer", "orientation", "events", "community"],
+    "likes": 29,
+    "timestamp": "2026-04-05T10:30:00Z",
+    "author": { "id": "u-4", "name": "Sofie Berg", "role": "moderator" }
+  },
+  {
+    "id": "dp-5",
+    "title": "Updated Computer Lab Usage Policy",
+    "tagline": "Changes to reservation limits and food/drink rules",
+    "body": "Following feedback collected over the past semester, the computer lab usage policy has been updated. The changes take effect immediately.\n\nKey change 1: Long-term workstation reservations are no longer permitted. Workstations can be reserved for up to 2 hours at a time. After 2 hours, unused reservations are automatically released. This addresses the pattern of students reserving machines for full days without using them.\n\nKey change 2: Food and drinks with secure lids are now permitted in Lab B, which was previously food-restricted. Lab A remains food-free to protect the specialized hardware and large-format displays. The full updated policy document is posted on the lab entrance and available on the IT department website.",
+    "headerImage": "https://picsum.photos/seed/computer-lab/1200/500",
+    "tags": ["policy", "lab", "it", "update"],
+    "likes": 18,
+    "timestamp": "2026-03-30T14:00:00Z",
+    "author": { "id": "u-3", "name": "Erik Larsen", "role": "admin" }
+  }
+]

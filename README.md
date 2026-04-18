@@ -1,42 +1,34 @@
-# sv
+# Cat
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Project
 
-## Creating a project
+This project is a simple blogging platform for IT students.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Content
 
-```sh
-# create a new project
-npx sv create my-app
-```
+### Cat food
 
-To recreate this project with the same configuration:
+This feed is for all students to post in. They can post about whatever they want. Posts include a header image, title, short tagline, and body.
 
-```sh
-# recreate this project
-pnpm dlx sv@0.15.1 create --template minimal --types ts --add vitest="usages:unit,component" playwright tailwindcss="plugins:typography,forms" sveltekit-adapter="adapter:node" --install pnpm .
-```
+### Dog posts
 
-## Developing
+This feed is for more serious news, updates, PSAs etc. Only certain people can post here.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Mouse clicks
 
-```sh
-npm run dev
+This feed lets users (anyone) post a link with a title. The post also includes a comment section where people can discuss the linked article/video/blog etc.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Features
 
-## Building
+- All three feeds:
+    - Include tags
+    - Can sort by date/time, likes, tags
+- Cat food and mouse clicks have comment sections
+- Clean modern UI with intuitive and fast navigation between feeds and posts
 
-To create a production version of your app:
+## Data
 
-```sh
-npm run build
-```
+- For now use JSON data to structure posts etc
+- Create local sample post files to use for testing
+- Make sure they can easily be swapped out for API calls
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mc-1",
+    "title": "VisuAlgo — Visualizing Sorting Algorithms",
+    "url": "https://visualgo.net/en/sorting",
+    "description": "Interactive visualizations for sorting, graph, and data structure algorithms. Essential for building intuition before algorithms exams — you can step through each operation.",
+    "tags": ["algorithms", "visualization", "study", "interactive"],
+    "likes": 78,
+    "timestamp": "2026-04-17T12:00:00Z",
+    "author": { "id": "u-1", "name": "Magnus Lie", "role": "student" }
+  },
+  {
+    "id": "mc-2",
+    "title": "The Missing Semester of Your CS Education — MIT",
+    "url": "https://missing.csail.mit.edu/",
+    "description": "MIT's free course covering what CS programs don't usually teach: shell scripting, Git internals, editors, debugging, and security basics. Highly recommended for anyone who feels gaps in their practical knowledge.",
+    "tags": ["tutorial", "tools", "linux", "git", "must-read"],
+    "likes": 134,
+    "timestamp": "2026-04-14T09:30:00Z",
+    "author": { "id": "u-6", "name": "Mia Andersen", "role": "student" }
+  },
+  {
+    "id": "mc-3",
+    "title": "CS50: Introduction to Computer Science — Free",
+    "url": "https://cs50.harvard.edu/x/",
+    "description": "Harvard's legendary intro CS course, completely free on edX. Best starting point for beginners or anyone wanting to fill fundamentals gaps. The problem sets are genuinely challenging.",
+    "tags": ["tutorial", "beginner", "fundamentals", "free"],
+    "likes": 91,
+    "timestamp": "2026-04-11T16:00:00Z",
+    "author": { "id": "u-5", "name": "Jonas Eriksen", "role": "student" }
+  },
+  {
+    "id": "mc-4",
+    "title": "Build Your Own Redis — CodeCrafters",
+    "url": "https://app.codecrafters.io/courses/redis/overview",
+    "description": "Step-by-step guide to implementing Redis from scratch in your language of choice. Surprisingly effective at building systems programming intuition. The RESP protocol section alone is worth it.",
+    "tags": ["tutorial", "systems", "programming", "redis"],
+    "likes": 56,
+    "timestamp": "2026-04-08T14:00:00Z",
+    "author": { "id": "u-7", "name": "Tobias Haugen", "role": "student" }
+  },
+  {
+    "id": "mc-5",
+    "title": "Awesome Self-Hosted — GitHub",
+    "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+    "description": "Massive curated list of software you can host yourself. Great starting point for homelab projects or finding privacy-respecting alternatives to common SaaS tools.",
+    "tags": ["github", "homelab", "self-hosted", "resources"],
+    "likes": 82,
+    "timestamp": "2026-04-05T11:00:00Z",
+    "author": { "id": "u-5", "name": "Jonas Eriksen", "role": "student" }
+  },
+  {
+    "id": "mc-6",
+    "title": "A Cartoon Intro to WebAssembly — Mozilla",
+    "url": "https://hacks.mozilla.org/2017/02/a-cartoon-intro-to-webassembly/",
+    "description": "Lin Clark's illustrated guide to how WebAssembly actually works. Best conceptual introduction I've found — explains compilation, the stack machine, and integration with JavaScript clearly.",
+    "tags": ["article", "webassembly", "web", "explainer"],
+    "likes": 43,
+    "timestamp": "2026-03-28T10:00:00Z",
+    "author": { "id": "u-2", "name": "Ingrid Holm", "role": "student" }
+  },
+  {
+    "id": "mc-7",
+    "title": "Roadmap.sh — Developer Learning Paths",
+    "url": "https://roadmap.sh/",
+    "description": "Community-built learning roadmaps for different developer roles: frontend, backend, DevOps, and more. Useful for identifying gaps in your knowledge or deciding what to learn next.",
+    "tags": ["resources", "career", "learning", "roadmap"],
+    "likes": 67,
+    "timestamp": "2026-03-20T13:30:00Z",
+    "author": { "id": "u-1", "name": "Magnus Lie", "role": "student" }
+  },
+  {
+    "id": "mc-8",
+    "title": "Excalidraw — Collaborative Whiteboard for Diagrams",
+    "url": "https://excalidraw.com/",
+    "description": "Open-source virtual whiteboard with a hand-drawn style. Perfect for sketching system architecture diagrams, algorithm visualizations for group study, or just thinking through problems visually.",
+    "tags": ["tool", "diagrams", "collaboration", "free"],
+    "likes": 49,
+    "timestamp": "2026-03-15T09:00:00Z",
+    "author": { "id": "u-7", "name": "Tobias Haugen", "role": "student" }
+  }
+]

@@ -1,9 +1,17 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import Nav from '$lib/components/Nav.svelte';
 
 	let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
-{@render children()}
+<svelte:head>
+	<title>Cat</title>
+	<meta name="description" content="The community platform for IT students" />
+</svelte:head>
+
+<Nav />
+
+<main class="py-8">
+	{@render children()}
+</main>
