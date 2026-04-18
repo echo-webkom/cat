@@ -8,7 +8,9 @@
 	import CommentSection from '$lib/components/CommentSection.svelte';
 
 	let { data }: { data: PageData } = $props();
-	const post = $derived((data.post ?? postStore.findById(data.id)) as CatFoodPost | undefined);
+	const post = $derived(
+		((data.post ? (postStore.getOverride(data.id) ?? data.post) : postStore.findById(data.id)) as CatFoodPost | undefined)
+	);
 	const comments = $derived(data.comments);
 
 	const isHtml = $derived(post?.body.trimStart().startsWith('<'));
@@ -19,12 +21,14 @@
 </svelte:head>
 
 <div class="mx-auto max-w-4xl px-4 sm:px-6">
-	<a
-		href="/cat-food"
-		class="mb-6 inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white"
-	>
-		← cat-food
-	</a>
+	<div class="mb-6 flex items-center justify-between">
+		<a href="/cat-food" class="text-sm text-zinc-400 transition-colors hover:text-white">
+			← cat-food
+		</a>
+		<a href="/cat-food/{data.id}/edit" class="text-xs text-zinc-500 transition-colors hover:text-zinc-200">
+			[ edit ]
+		</a>
+	</div>
 
 	{#if post}
 		<div class="overflow-hidden border border-zinc-800 bg-zinc-900">

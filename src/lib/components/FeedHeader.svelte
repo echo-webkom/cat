@@ -1,11 +1,13 @@
 <script lang="ts">
 	let {
 		title,
+		slug,
 		subtitle,
 		searchQuery = $bindable(''),
 		newHref
 	}: {
 		title: string;
+		slug: string;
 		subtitle: string;
 		searchQuery: string;
 		newHref?: string;
@@ -16,7 +18,8 @@
 	<div class="mb-5 flex items-start justify-between gap-4">
 		<div>
 			<h1 class="text-3xl font-bold text-white">
-				<span class="text-zinc-600 select-none mr-1">#</span>{title}
+				<span class="select-none text-[#00ff88]">$</span>
+				<span class="mx-2 text-zinc-500">ls</span>{slug}
 			</h1>
 			<p class="mt-1 font-sans text-sm text-zinc-400">{subtitle}</p>
 		</div>

@@ -8,7 +8,10 @@
 
 	let searchQuery = $state('');
 
-	const allPosts = $derived([...postStore.getCatFood(), ...data.posts]);
+	const allPosts = $derived([
+		...postStore.getCatFood(),
+		...data.posts.map((p) => (postStore.getOverride(p.id) ?? p) as typeof p)
+	]);
 
 	const filteredPosts = $derived(() => {
 		if (!searchQuery.trim()) return allPosts;

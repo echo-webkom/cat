@@ -40,6 +40,7 @@ class PostStore {
 	#catFood = $state<CatFoodPost[]>([]);
 	#dogPosts = $state<DogPost[]>([]);
 	#mouseClicks = $state<MouseClick[]>([]);
+	#overrides = $state<Record<string, CatFoodPost | DogPost | MouseClick>>({});
 
 	addCatFood(post: CatFoodPost) {
 		this.#catFood = [post, ...this.#catFood];
@@ -51,6 +52,31 @@ class PostStore {
 
 	addMouseClick(post: MouseClick) {
 		this.#mouseClicks = [post, ...this.#mouseClicks];
+	}
+
+	update(id: string, updated: CatFoodPost | DogPost | MouseClick) {
+		const cfIdx = this.#catFood.findIndex((p) => p.id === id);
+		if (cfIdx !== -1) {
+			this.#catFood = this.#catFood.map((p) => (p.id === id ? (updated as CatFoodPost) : p));
+			return;
+		}
+		const dpIdx = this.#dogPosts.findIndex((p) => p.id === id);
+		if (dpIdx !== -1) {
+			this.#dogPosts = this.#dogPosts.map((p) => (p.id === id ? (updated as DogPost) : p));
+			return;
+		}
+		const mcIdx = this.#mouseClicks.findIndex((p) => p.id === id);
+		if (mcIdx !== -1) {
+			this.#mouseClicks = this.#mouseClicks.map((p) =>
+				p.id === id ? (updated as MouseClick) : p
+			);
+			return;
+		}
+		this.#overrides = { ...this.#overrides, [id]: updated };
+	}
+
+	getOverride(id: string): CatFoodPost | DogPost | MouseClick | undefined {
+		return this.#overrides[id];
 	}
 
 	getCatFood(): CatFoodPost[] {
@@ -66,7 +92,10 @@ class PostStore {
 	}
 
 	findById(id: string): CatFoodPost | DogPost | MouseClick | undefined {
-		return [...this.#catFood, ...this.#dogPosts, ...this.#mouseClicks].find((p) => p.id === id);
+		return (
+			this.#overrides[id] ??
+			[...this.#catFood, ...this.#dogPosts, ...this.#mouseClicks].find((p) => p.id === id)
+		);
 	}
 }
 

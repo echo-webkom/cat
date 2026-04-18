@@ -7,10 +7,12 @@
 	let {
 		placeholder = 'write something...',
 		minHeight = '200px',
+		content = '',
 		onchange
 	}: {
 		placeholder?: string;
 		minHeight?: string;
+		content?: string;
 		onchange?: (html: string) => void;
 	} = $props();
 
@@ -44,6 +46,7 @@
 	onMount(() => {
 		editor = new Editor({
 			element,
+			content,
 			extensions: [
 				StarterKit,
 				Placeholder.configure({ placeholder })

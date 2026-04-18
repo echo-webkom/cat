@@ -7,7 +7,9 @@
 	import LikeButton from '$lib/components/LikeButton.svelte';
 
 	let { data }: { data: PageData } = $props();
-	const post = $derived((data.post ?? postStore.findById(data.id)) as DogPost | undefined);
+	const post = $derived(
+		((data.post ? (postStore.getOverride(data.id) ?? data.post) : postStore.findById(data.id)) as DogPost | undefined)
+	);
 
 	const isHtml = $derived(post?.body.trimStart().startsWith('<'));
 </script>
@@ -17,12 +19,14 @@
 </svelte:head>
 
 <div class="mx-auto max-w-4xl px-4 sm:px-6">
-	<a
-		href="/dog-posts"
-		class="mb-6 inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white"
-	>
-		← dog-posts
-	</a>
+	<div class="mb-6 flex items-center justify-between">
+		<a href="/dog-posts" class="text-sm text-zinc-400 transition-colors hover:text-white">
+			← dog-posts
+		</a>
+		<a href="/dog-posts/{data.id}/edit" class="text-xs text-zinc-500 transition-colors hover:text-zinc-200">
+			[ edit ]
+		</a>
+	</div>
 
 	{#if post}
 		<div class="border border-zinc-800 bg-zinc-900">

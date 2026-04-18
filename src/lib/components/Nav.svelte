@@ -27,7 +27,7 @@
 	></button>
 {/if}
 
-<nav class="sticky top-0 z-50 border-b border-zinc-800 bg-[#0a0a0a]">
+<nav class="sticky top-0 z-50 bg-[#0a0a0a]">
 	<div class="mx-auto grid max-w-3xl grid-cols-[auto_1fr_auto] items-center px-4 sm:px-6">
 		<a href="/cat-food" class="flex items-center gap-0 py-4 pr-6 shrink-0">
 			<span class="text-[#00ff88] font-bold text-base select-none">~/</span>

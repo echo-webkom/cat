@@ -8,7 +8,9 @@
 	import CommentSection from '$lib/components/CommentSection.svelte';
 
 	let { data }: { data: PageData } = $props();
-	const post = $derived((data.post ?? postStore.findById(data.id)) as MouseClick | undefined);
+	const post = $derived(
+		((data.post ? (postStore.getOverride(data.id) ?? data.post) : postStore.findById(data.id)) as MouseClick | undefined)
+	);
 	const comments = $derived(data.comments);
 	const domain = $derived(post ? getDomain(post.url) : '');
 
@@ -20,12 +22,14 @@
 </svelte:head>
 
 <div class="mx-auto max-w-4xl px-4 sm:px-6">
-	<a
-		href="/mouse-clicks"
-		class="mb-6 inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white"
-	>
-		← mouse-clicks
-	</a>
+	<div class="mb-6 flex items-center justify-between">
+		<a href="/mouse-clicks" class="text-sm text-zinc-400 transition-colors hover:text-white">
+			← mouse-clicks
+		</a>
+		<a href="/mouse-clicks/{data.id}/edit" class="text-xs text-zinc-500 transition-colors hover:text-zinc-200">
+			[ edit ]
+		</a>
+	</div>
 
 	{#if post}
 		<div class="border border-zinc-800 bg-zinc-900">
