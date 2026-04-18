@@ -1,4 +1,4 @@
-import type { Comment } from './types.js';
+import type { CatFoodPost, Comment, DogPost, MouseClick } from './types.js';
 
 class LikeStore {
 	#counts = $state<Record<string, number>>({});
@@ -36,5 +36,40 @@ class CommentStore {
 	}
 }
 
+class PostStore {
+	#catFood = $state<CatFoodPost[]>([]);
+	#dogPosts = $state<DogPost[]>([]);
+	#mouseClicks = $state<MouseClick[]>([]);
+
+	addCatFood(post: CatFoodPost) {
+		this.#catFood = [post, ...this.#catFood];
+	}
+
+	addDogPost(post: DogPost) {
+		this.#dogPosts = [post, ...this.#dogPosts];
+	}
+
+	addMouseClick(post: MouseClick) {
+		this.#mouseClicks = [post, ...this.#mouseClicks];
+	}
+
+	getCatFood(): CatFoodPost[] {
+		return this.#catFood;
+	}
+
+	getDogPosts(): DogPost[] {
+		return this.#dogPosts;
+	}
+
+	getMouseClicks(): MouseClick[] {
+		return this.#mouseClicks;
+	}
+
+	findById(id: string): CatFoodPost | DogPost | MouseClick | undefined {
+		return [...this.#catFood, ...this.#dogPosts, ...this.#mouseClicks].find((p) => p.id === id);
+	}
+}
+
 export const likeStore = new LikeStore();
 export const commentStore = new CommentStore();
+export const postStore = new PostStore();

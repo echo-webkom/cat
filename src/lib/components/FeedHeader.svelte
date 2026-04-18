@@ -2,20 +2,33 @@
 	let {
 		title,
 		subtitle,
-		searchQuery = $bindable('')
+		searchQuery = $bindable(''),
+		newHref
 	}: {
 		title: string;
 		subtitle: string;
 		searchQuery: string;
+		newHref?: string;
 	} = $props();
 </script>
 
 <div class="mb-8">
-	<div class="mb-5">
-		<h1 class="text-3xl font-bold text-white">
-			<span class="text-zinc-600 select-none mr-1">#</span>{title}
-		</h1>
-		<p class="mt-1 font-sans text-sm text-zinc-400">{subtitle}</p>
+	<div class="mb-5 flex items-start justify-between gap-4">
+		<div>
+			<h1 class="text-3xl font-bold text-white">
+				<span class="text-zinc-600 select-none mr-1">#</span>{title}
+			</h1>
+			<p class="mt-1 font-sans text-sm text-zinc-400">{subtitle}</p>
+		</div>
+
+		{#if newHref}
+			<a
+				href={newHref}
+				class="mt-1 shrink-0 border border-zinc-700 px-3 py-1.5 text-xs text-zinc-400 transition-colors hover:border-[#00ff88]/40 hover:text-[#00ff88]"
+			>
+				[ + new ]
+			</a>
+		{/if}
 	</div>
 
 	<div class="relative">

@@ -2,15 +2,18 @@
 	import type { PageData } from './$types';
 	import PostCard from '$lib/components/PostCard.svelte';
 	import FeedHeader from '$lib/components/FeedHeader.svelte';
+	import { postStore } from '$lib/store.svelte.js';
 
 	let { data }: { data: PageData } = $props();
 
 	let searchQuery = $state('');
 
+	const allPosts = $derived([...postStore.getCatFood(), ...data.posts]);
+
 	const filteredPosts = $derived(() => {
-		if (!searchQuery.trim()) return data.posts;
+		if (!searchQuery.trim()) return allPosts;
 		const q = searchQuery.toLowerCase();
-		return data.posts.filter(
+		return allPosts.filter(
 			(p) => p.title.toLowerCase().includes(q) || p.tagline.toLowerCase().includes(q)
 		);
 	});
@@ -21,7 +24,7 @@
 </svelte:head>
 
 <div class="mx-auto max-w-3xl px-4 sm:px-6">
-	<FeedHeader title="Cat Food" subtitle="Fresh posts from the community" bind:searchQuery />
+	<FeedHeader title="Cat Food" subtitle="Fresh posts from the community" bind:searchQuery newHref="/cat-food/new" />
 
 	{#if filteredPosts().length === 0}
 		<div class="flex flex-col items-center py-20 text-center">
