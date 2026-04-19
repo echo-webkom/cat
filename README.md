@@ -21,8 +21,8 @@ This feed lets users (anyone) post a link with a title. The post also includes a
 ## Features
 
 - All three feeds:
-    - Include tags
-    - Can sort by date/time, likes, tags
+  - Include tags
+  - Can sort by date/time, likes, tags
 - Cat food and mouse clicks have comment sections
 - Clean modern UI with intuitive and fast navigation between feeds and posts
 
@@ -31,4 +31,3 @@ This feed lets users (anyone) post a link with a title. The post also includes a
 - For now use JSON data to structure posts etc
 - Create local sample post files to use for testing
 - Make sure they can easily be swapped out for API calls
-

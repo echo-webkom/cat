@@ -1,14 +1,12 @@
-import type { CatFoodPost, Comment } from '$lib/types.js';
-import catFoodData from '$lib/data/cat-food.json';
-import commentsData from '$lib/data/comments.json';
+import type { CatFoodPost, Comment } from '$lib/types.js'
+import catFoodData from '$lib/data/cat-food.json'
+import commentsData from '$lib/data/comments.json'
 
 export function load({ params }: { params: { id: string } }) {
-	const post = (catFoodData as CatFoodPost[]).find((p) => p.id === params.id) ?? null;
-	const comments = post
-		? (commentsData as Comment[]).filter(
-				(c) => c.postId === params.id && c.postType === 'cat-food'
-			)
-		: [];
+  const post = (catFoodData as CatFoodPost[]).find((p) => p.id === params.id) ?? null
+  const comments = post
+    ? (commentsData as Comment[]).filter((c) => c.postId === params.id && c.postType === 'cat-food')
+    : []
 
-	return { post, id: params.id, comments };
+  return { post, id: params.id, comments }
 }

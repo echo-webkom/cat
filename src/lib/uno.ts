@@ -1,4 +1,4 @@
-import { env } from "$env/dynamic/public";
+import { env } from '$env/dynamic/public'
 
 /**
  * Creates a profile picture URL for a user.
@@ -12,13 +12,13 @@ export const createProfilePictureUrl = (
   size = 1,
   version?: string | number,
 ) => {
-  if (!userId) return undefined;
-  const baseUrl = env.PUBLIC_UNO_BASE_URL ?? "https://uno.echo-webkom.no";
+  if (!userId) return undefined
+  const baseUrl = env.PUBLIC_UNO_BASE_URL ?? 'https://uno.echo-webkom.no'
 
-  const params = new URLSearchParams({ size: String(size) });
+  const params = new URLSearchParams({ size: String(size) })
   if (version !== undefined) {
-    params.set("v", String(version));
+    params.set('v', String(version))
   }
 
-  return `${baseUrl}/users/${userId}/image?${params.toString()}`;
-};
+  return `${baseUrl}/users/${userId}/image?${params.toString()}`
+}

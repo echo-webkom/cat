@@ -160,4 +160,3 @@ Use any modern frontend stack, preferably:
 ## Final Goal
 
 Deliver a polished MVP prototype demonstrating the full platform concept with realistic mock data, smooth navigation, scalable structure, and production-ready frontend patterns.
-

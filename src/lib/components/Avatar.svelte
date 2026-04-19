@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { getAvatarColor, getInitials } from '$lib/utils.js';
+  import { getAvatarColor, getInitials } from '$lib/utils.js'
 
-	let { name, size = 'md' }: { name: string; size?: 'sm' | 'md' | 'lg' } = $props();
+  let { name, size = 'md' }: { name: string; size?: 'sm' | 'md' | 'lg' } = $props()
 
-	const sizeClasses = { sm: 'w-7 h-7 text-xs', md: 'w-9 h-9 text-sm', lg: 'w-12 h-12 text-base' };
+  const sizeClasses = { sm: 'w-7 h-7 text-xs', md: 'w-9 h-9 text-sm', lg: 'w-12 h-12 text-base' }
 </script>
 
 <div
-	class="flex shrink-0 items-center justify-center font-bold text-white {sizeClasses[size]}"
-	style="background-color: {getAvatarColor(name)}"
-	title={name}
+  class="flex shrink-0 items-center justify-center font-bold text-white {sizeClasses[size]}"
+  style="background-color: {getAvatarColor(name)}"
+  title={name}
 >
-	{getInitials(name)}
+  {getInitials(name)}
 </div>

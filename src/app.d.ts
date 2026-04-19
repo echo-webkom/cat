@@ -4,14 +4,10 @@ declare global {
   namespace App {
     // interface Error {}
     interface Locals {
-      user: import("$lib/types").User | null;
+      user: import('$lib/types').User | null
     }
-    interface PageData {
-      user: import("$lib/types").User | null;
-    }
+    // interface PageData {}
     // interface PageState {}
     // interface Platform {}
   }
 }
-
-export {};
