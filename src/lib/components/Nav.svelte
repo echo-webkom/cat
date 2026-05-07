@@ -1,20 +1,9 @@
 <script lang="ts">
-  import { page } from '$app/state'
   import { getContext } from 'svelte'
   import type { User } from '$lib/types'
   import { getAvatarColor, getInitials } from '$lib/utils.js'
   import { enhance } from '$app/forms'
   import { createProfilePictureUrl } from '$lib/uno'
-
-  const feeds = [
-    { href: '/cat-food', label: 'Cat Food' },
-    { href: '/dog-posts', label: 'Dog Posts' },
-    { href: '/mouse-clicks', label: 'Mouse Clicks' },
-  ]
-
-  function isActive(href: string) {
-    return page.url.pathname.startsWith(href)
-  }
 
   const user = getContext<{ current: User | null }>('user')
 
@@ -33,29 +22,12 @@
 
 <nav class="sticky top-0 z-50 bg-[#0a0a0a]">
   <div class="mx-auto grid max-w-3xl grid-cols-[auto_1fr_auto] items-center px-4 sm:px-6">
-    <a href="/cat-food" class="flex items-center gap-0 py-4 pr-6 shrink-0">
+    <a href="/" class="flex items-center gap-0 py-4 pr-6 shrink-0">
       <span class="text-[#00ff88] font-bold text-base select-none">~/</span>
       <span class="text-lg font-bold tracking-tight text-white">cat</span>
     </a>
 
-    <div class="flex items-center justify-center overflow-x-auto scrollbar-none">
-      <div class="flex items-center">
-        {#each feeds as feed}
-          <a
-            href={feed.href}
-            class="relative whitespace-nowrap px-3 py-4 text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:content-[''] after:transition-transform {isActive(
-              feed.href,
-            )
-              ? 'text-[#00ff88] after:bg-[#00ff88]'
-              : 'text-zinc-500 hover:text-zinc-300 after:scale-x-0'}"
-          >
-            {feed.label}
-          </a>
-        {/each}
-      </div>
-    </div>
-
-    <div class="relative z-40 pl-6">
+    <div class="relative z-40 pl-6 ml-auto">
       {#if user.current}
         <button
           type="button"

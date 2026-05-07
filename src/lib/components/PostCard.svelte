@@ -1,14 +1,12 @@
 <script lang="ts">
-  import type { CatFoodPost } from '$lib/types.js'
   import { formatRelativeTime } from '$lib/utils.js'
   import Avatar from './Avatar.svelte'
-  import LikeButton from './LikeButton.svelte'
 
-  let { post }: { post: CatFoodPost } = $props()
+  let { post } = $props()
 </script>
 
 <a
-  href="/cat-food/{post.id}"
+  href="/{post.id}"
   class="group flex flex-col overflow-hidden border border-zinc-800 bg-zinc-900 transition-colors hover:border-[#00ff88]/30"
 >
   <div class="h-44 w-full overflow-hidden bg-zinc-800">
@@ -37,7 +35,6 @@
           >{post.author.name} // {formatRelativeTime(post.timestamp)}</span
         >
       </div>
-      <LikeButton postId={post.id} initialLikes={post.likes} />
     </div>
   </div>
 </a>

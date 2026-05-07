@@ -1,38 +1,14 @@
 export interface Author {
   id: string
   name: string
-  role: 'student' | 'admin' | 'moderator'
 }
 
-export interface CatFoodPost {
+export interface CatPost {
   id: string
   title: string
   tagline: string
   body: string
   headerImage: string
-  tags: string[]
-  likes: number
-  timestamp: string
-  author: Author
-}
-
-export interface DogPost {
-  id: string
-  title: string
-  tagline: string
-  body: string
-  headerImage: string
-  tags: string[]
-  likes: number
-  timestamp: string
-  author: Author
-}
-
-export interface MouseClick {
-  id: string
-  title: string
-  url: string
-  description: string
   tags: string[]
   likes: number
   timestamp: string

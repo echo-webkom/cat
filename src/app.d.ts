@@ -5,9 +5,12 @@ declare global {
     // interface Error {}
     interface Locals {
       user: import('$lib/types').User | null
+      fetcher: import('$lib/posts').CatFetcher
     }
     // interface PageData {}
     // interface PageState {}
     // interface Platform {}
   }
 }
+
+export {}
